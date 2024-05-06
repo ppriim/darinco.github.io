@@ -54,11 +54,11 @@ body {
 
 .text-main{
     font-family: 'American Typewriter', light;
-    font-size: min(vw, 54px);
-    margin-top: -2vh;
-    margin-left: 7vw;
+    font-size: min(4vw, 54px);
+    margin-top: -3vh;
+    margin-left: 28vw;
     text-align: right;
-    color: white;
+    color: #F1604e;
 }
     
 .question {
