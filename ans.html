@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Answer</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body style="background-image: url('image/BG_game-01.png')"
+        class="page-flip">
+        <div id="answerMessage">
+            <script src="script.js"></script>
+            <script>
+                const message = checkAnswers();
+
+                let imageSrc;
+                switch (message) {
+                    case 'chocolate':
+                        imageSrc = 'image/game_cocktail-08.jpg';
+                        break;
+                    case 'apple pie':
+                        imageSrc = 'image/game_cocktail-09.jpg';
+                        break;
+                    case 'pineapple':
+                        imageSrc = 'image/game_cocktail-10.jpg';
+                        break;
+                    case 'lychee':
+                        imageSrc = 'image/game_cocktail-11.jpg';
+                        break;
+                    default:
+                        imageSrc = 'no_answer.jpg'; // ภาพที่จะแสดงหากไม่มีคำตอบ
+                }
+
+                // แสดงภาพในหน้าเว็บ
+                const imgElement = document.createElement('img');
+                imgElement.id = 'answerImage';
+                imgElement.src = imageSrc;
+                document.getElementById('answerMessage').appendChild(imgElement);
+                
+            </script>
+            
+        </div>
+        <div>
+            <img src="image/reload.png" id="reloadButton" alt="Reload" onclick="goBackToMain()">
+        </div>
+        <script>
+            function goBackToMain() {
+                window.location.href = 'index.html'; // Redirect to main.html
+            }
+        </script>
+    </body>
+</html>
